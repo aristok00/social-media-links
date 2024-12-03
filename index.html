@@ -78,28 +78,28 @@
 
         /* Gaya tombol dengan gambar khusus tanpa warna background */
         .facebook {
-            background-image: url('/data/data/com.termux/files/home/storage/shared/Documents/social-media-links/images/fb_logo.png');
+            background-image: url('./images/fb_logo.png');
         }
 
         .instagram {
-            background-image: url('https://imgur.com/TLjhmxc.png');
+            background-image: url('./images/ig_logo.png ');
         }
 
         .twitter {
-            background-image: url('https://via.placeholder.com/80x80?text=TW');
+            background-image: url('./images/x_logo.png');
         }
 
-        .linkedin {
-            background-image: url('https://via.placeholder.com/80x80?text=LI');
+        .wa {
+            background-image: url('./images/Wa_logo.png');
         }
 
         .youtube {
             background-image: url('https://via.placeholder.com/80x80?text=YT');
         }
 
-        .copy {
+        .wallet {
             position: relative;
-            background-image: url('https://via.placeholder.com/80x80?text=Copy');
+            background-image: url('./images/wallet_logo.png');
         }
 
         /* Animasi fade-in */
@@ -117,22 +117,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Temukan Saya di Sosial Media</h1>
+        <h1>Milih o sak karepmu Suu!!</h1>
         <div class="button-container">
-            <a href="https://facebook.com/nama_anda" target="_blank" class="button facebook">Facebook</a>
-            <a href="https://instagram.com/nama_anda" target="_blank" class="button instagram">Instagram</a>
-            <a href="https://twitter.com/nama_anda" target="_blank" class="button twitter">Twitter</a>
+            <a href="https://facebook.com/nama_anda" target="_blank" class="button facebook"> </a>
+            <a href="https://instagram.com/nama_anda" target="_blank" class="button instagram"> </a>
+            <a href="https://twitter.com/nama_anda" target="_blank" class="button twitter"> </a>
             <a href="https://linkedin.com/in/nama_anda" target="_blank" class="button linkedin">LinkedIn</a>
             <a href="https://youtube.com/nama_anda" target="_blank" class="button youtube">YouTube</a>
-            <button class="button copy" onclick="copyText()">Copy</button>
+            <button class="button copy" onclick="copyText()"> </button>
         </div>
     </div>
 
     <script>
         function copyText() {
-            const textToCopy = "Ini adalah teks yang akan disalin!";
+            const textToCopy = "Suksess cokk!!!";
             navigator.clipboard.writeText(textToCopy).then(() => {
-                alert("Teks berhasil disalin: " + textToCopy);
+                alert("Uwes su: " + textToCopy);
             }).catch(err => {
                 alert("Gagal menyalin teks: " + err);
             });
