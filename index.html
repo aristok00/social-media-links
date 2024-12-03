@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Sosial Media</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #D2B48C; /* Warna coklat tradisional */
+            background-image: linear-gradient(45deg, #A0522D 25%, #8B4513 25%, #8B4513 50%, #A0522D 50%, #A0522D 75%, #8B4513 75%, #8B4513); /* Pola kayu */
+            background-size: 50px 50px;
+            display: flex;
+            justify-content: center; /* Rata tengah horizontal */
+            align-items: center; /* Rata tengah vertikal */
+            height: 100vh; /* Tinggi layar penuh */
+        }
+
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 5px solid #8B4513;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            opacity: 0; /* Mulai dengan transparan */
+            animation: fadeIn 1s ease-out forwards; /* Efek animasi */
+        }
+
+        h1 {
+            color: #4B2E2E;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+            gap: 15px; /* Jarak antar tombol */
+        }
+
+        .button {
+            width: 100px; /* Lebar tombol lingkaran */
+            height: 100px; /* Tinggi tombol lingkaran */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+            background-size: cover; /* Gambar latar akan menutupi tombol */
+            background-position: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.3s;
+            margin: 0 auto; /* Membuat tombol berada di tengah kolom */
+            opacity: 0; /* Mulai dengan transparan */
+            animation: fadeIn 0.8s ease-out forwards; /* Efek animasi */
+        }
+
+        /* Tambahkan efek delay untuk tombol agar tampil bertahap */
+        .button:nth-child(1) { animation-delay: 0.2s; }
+        .button:nth-child(2) { animation-delay: 0.4s; }
+        .button:nth-child(3) { animation-delay: 0.6s; }
+        .button:nth-child(4) { animation-delay: 0.8s; }
+        .button:nth-child(5) { animation-delay: 1s; }
+        .button:nth-child(6) { animation-delay: 1.2s; }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gaya tombol dengan gambar khusus tanpa warna background */
+        .facebook {
+            background-image: url('/data/data/com.termux/files/home/storage/shared/Documents/social-media-links/images/fb_logo.png');
+        }
+
+        .instagram {
+            background-image: url('https://imgur.com/TLjhmxc.png');
+        }
+
+        .twitter {
+            background-image: url('https://via.placeholder.com/80x80?text=TW');
+        }
+
+        .linkedin {
+            background-image: url('https://via.placeholder.com/80x80?text=LI');
+        }
+
+        .youtube {
+            background-image: url('https://via.placeholder.com/80x80?text=YT');
+        }
+
+        .copy {
+            position: relative;
+            background-image: url('https://via.placeholder.com/80x80?text=Copy');
+        }
+
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Animasi bergerak dari bawah */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Posisi akhir */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temukan Saya di Sosial Media</h1>
+        <div class="button-container">
+            <a href="https://facebook.com/nama_anda" target="_blank" class="button facebook">Facebook</a>
+            <a href="https://instagram.com/nama_anda" target="_blank" class="button instagram">Instagram</a>
+            <a href="https://twitter.com/nama_anda" target="_blank" class="button twitter">Twitter</a>
+            <a href="https://linkedin.com/in/nama_anda" target="_blank" class="button linkedin">LinkedIn</a>
+            <a href="https://youtube.com/nama_anda" target="_blank" class="button youtube">YouTube</a>
+            <button class="button copy" onclick="copyText()">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function copyText() {
+            const textToCopy = "Ini adalah teks yang akan disalin!";
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert("Teks berhasil disalin: " + textToCopy);
+            }).catch(err => {
+                alert("Gagal menyalin teks: " + err);
+            });
+        }
+    </script>
+</body>
+</html>
+
